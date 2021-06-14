@@ -4,7 +4,7 @@
 *********************************/
 
 //　タイマー値(秒)
-const TIMER_SECONDS = 60;
+const TIMER_SECONDS = 30;
 
 //ミリ秒
 const ONE_MS = 1000;
