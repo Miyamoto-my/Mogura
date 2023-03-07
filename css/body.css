@@ -1,0 +1,21 @@
+@charset "utf-9";
+
+html, body { 
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: linear-gradient(to right,
+        rgba(255, 255, 255, 0.5) 0%, 
+        rgba(193, 255, 190, 0.7) 20%,
+        rgba(193, 255, 190, 0.7) 80%, 
+        rgba(255, 255, 255, 0.5) 100%), 
+        url(../img/bg_image.jpg);
+}
+ 
+body > footer {
+  position: sticky;
+  top: 100vh;
+}

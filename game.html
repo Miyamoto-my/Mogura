@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/jquery-3.6.js"></script>
+    <script src="./js/anime.min.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/game-main.js"></script>
+    <title>Moguraたたき | Game</title>
+</head>
+
+<body>
+    <header class="bg-success border-bottom border-5">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center py-3">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                    <h1 class="text-light pb-3">Moguraたたき</h1>
+                </a>
+                <ul class="nav nav-pills align-items-end">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Top</a></li>
+                    <li class="nav-item"><a href="game.html" class="nav-link active" aria-current="page">Game</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Ranking</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="settingView" class="my-3">
+                <div id="rule" class="mt-5">
+                    <h2 class="text-center">ルール説明</h2>
+                    <div id="rule-slide" class="carousel slide p-3 m-3" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#rule-slide" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#rule-slide" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#rule-slide" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#rule-slide" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner shadow-lg">
+                            <div class="carousel-item active">
+                                <img src="img/rule_1.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First slide label</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/rule_2.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Second slide label</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/rule_3.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/rule_4.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#rule-slide"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#rule-slide"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <h2 class="text-center">Setting</h2>
+                <div class="py-4">
+                    <h2 class="text-center">難易度の設定</h2>
+                    <div class="btn-group w-100 py-2 pb-5" role="group">
+                        <input type="radio" class="btn-check diff-btn" name="options" id="diff-elementary">
+                        <label class="btn btn-primary btn-lg mx-1 shadow-lg" for="diff-elementary"
+                            data-bs-toggle="popover" data-bs-placement="bottom" title="初回プレイは初級がおすすめ！"
+                            data-bs-html="true" data-bs-content=" 
+                            入れ替え速度：<strong>500</strong>ms<br>
+                            Moguraの出現確率：<strong>60</strong>%<br>
+                            おにぎりの出現確率：<strong>20</strong>%<br>
+                            地雷の出現確率：<strong>20</strong>%">初級</label>
+
+                        <input type="radio" class="btn-check diff-btn" name="options" id="diff-intermediate">
+                        <label class="btn btn-warning btn-lg mx-1 shadow-lg" for="diff-intermediate"
+                            data-bs-toggle="popover" data-bs-placement="bottom" title="慣れてきた or 初級が余裕なら中級"
+                            data-bs-html="true" data-bs-content="
+                            入れ替え速度：<strong>300</strong>ms<br>
+                            Moguraの出現確率：<strong>50</strong>%<br>
+                            おにぎりの出現確率：<strong>20</strong>%<br>
+                            地雷の出現確率：<strong>30</strong>%">中級</label>
+
+                        <input type="radio" class="btn-check diff-btn" name="options" id="diff-advanced">
+                        <label class="btn btn-danger btn-lg mx-1 shadow-lg" for="diff-advanced" data-bs-toggle="popover"
+                            data-bs-placement="bottom" title="初回プレイは初級がおすすめ！" data-bs-html="true" data-bs-content="
+                            入れ替え速度：<strong>200</strong>ms<br>
+                            Moguraの出現確率：<strong>40</strong>%<br>
+                            おにぎりの出現確率：<strong>20</strong>%<br>
+                            地雷の出現確率：<strong>40</strong>%">上級</label>
+                    </div>
+                </div>
+                <div class="py-3">
+                    <h2 class="text-center">準備はＯＫ？</h2>
+                    <div class="d-flex justify-content-center py-2">
+                        <button id="to_gameView-btn" class="btn btn-lg btn-info w-50 py-3 shadow-lg">Game Start
+                            !</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gameView" class="my-3">
+                <div class="row text-center mt-5">
+                    <div class="col-12">
+                        <p class="fs-3">難易度：<span class="gameLevel-text">初級</span></p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p class="fs-3">タイマー：<span id="timer-text">0</span></p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p class="fs-3">ヒット数：<span class="hits-text">0</span></p>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div id="log" class="col-12 order-md-2 col-md-4 p-0 shadow">
+                        <li class="list-group-item logContent">履歴が表示されます。</li>
+                        <ol id="logList-ol" class="list-group list-group-numbered"></ol>
+                    </div>
+                    <table id="board" class="col-12 order-md-1 col-md-8 shadow">
+                        <tr>
+                            <td><img class="hole" src="./img/none.png" alt="hole-img"></td>
+                            <td><img class="hole" src="./img/none.png" alt="hole-img"></td>
+                            <td><img class="hole" src="./img/none.png" alt="hole-img"></td>
+                        </tr>
+                        <tr>
+                            <td><img class="hole" src="./img/none.png" alt="hole-img"></td>
+                            <td><img class="hole" src="./img/none.png" alt="hole-img"></td>
+                            <td><img class="hole" src="./img/none.png" alt="hole-img"></td>
+                        </tr>
+                        <tr>
+                            <td><img class="hole" src="./img/none.png" alt="hole-img"></td>
+                            <td><img class="hole" src="./img/none.png" alt="hole-img"></td>
+                            <td><img class="hole" src="./img/none.png" alt="hole-img"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row text-center my-3">
+                    <div class="col p-3">
+                        <button id="to_settingView-btn" class="btn btn-info p-3 px-5 shadow-lg"
+                            type="button">Back</button>
+                    </div>
+                    <div class="col p-3">
+                        <button id="gameStart-btn" class="btn btn-primary p-3 px-5 shadow-lg"
+                            type="button">Start</button>
+                    </div>
+                    <div class="col p-3">
+                        <button id="to_resultView-btn" class="btn btn-primary p-3 px-5 shadow-lg" type="button"
+                            disabled>Result</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultView" class="my-3">
+                <div class="mt-5">
+                    <h2 class="text-center">Result</h1>
+                        <div class="py-3 text-center">
+                            <p class="fs-3">難易度：<span class="gameLevel-text">初級</span></p>
+                            <p class="fs-3">ヒット数：<span class="hits-text">0</span></p>
+                        </div>
+                </div>
+                <div id="statistics" class="card m-3">
+                    <div class="card-header">
+                        <h3 class="card-title text-center">統計</h3>
+                    </div>
+                    <div class="card-body row">
+                        <p class="fs-3">クリック分布</p>
+                        <div class="col-12 col-md-8 py-2">
+                            <table id="clickDistribution" class="shadow-lg">
+                                <tr>
+                                    <td>0%</td>
+                                    <td>0%</td>
+                                    <td>100%</td>
+                                </tr>
+                                <tr>
+                                    <td>0%</td>
+                                    <td>0%</td>
+                                    <td>0%</td>
+                                </tr>
+                                <tr>
+                                    <td>0%</td>
+                                    <td>0%</td>
+                                    <td>0%</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="row">
+                                <div class="col-6 col-md-12 py-2">
+                                    <p class="fs-5">クリック分布</p>
+                                    <dt><span class="cD cD-0">　</span> ~ <span class="cD cD-3">　</span></dt>
+                                    <dd>0~30%</dd>
+                                    <dt><span class="cD cD-4">　</span> ~ <span class="cD cD-6">　</span></dt>
+                                    <dd>31~60%</dd>
+                                    <dt><span class="cD cD-7">　</span> ~ <span class="cD cD-10">　</span></dt>
+                                    <dd>61~100%</dd>
+                                </div>
+                                <div class="col-6 col-md-12 py-2">
+                                    <p class="fs-5">クリック成功率</p>
+                                    <dd><span class="cD cD-0">　</span> 内の数値 ( % )</dd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-success border-top border-3">
+        <div class="text-center p-1">
+            <span class="small text-light">©2021-2022 Y.Miyamoto R.Morioka</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        });
+    </script>
+</body>
+
+
+</html>
