@@ -6,54 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/board.js"></script>
 </head>
 <body>
-    <div id="board">
-        <table>
-            <tr>
-                <td>
-                    <img class="hole" src="./img/mogura.png" alt="hole">
-                </td>
-                <td>
-                    <img class="hole" src="./img/none.png" alt="hole">
-                </td>
-                <td>
-                    <img class="hole" src="./img/none.png" alt="hole">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img class="hole" src="./img/none.png" alt="hole">
-                </td>
-                <td>
-                    <img class="hole" src="./img/none.png" alt="hole">
-                </td>
-                <td>
-                    <img class="hole" src="./img/none.png" alt="hole">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img class="hole" src="./img/none.png" alt="hole">
-                </td>
-                <td>
-                    <img class="hole" src="./img/none.png" alt="hole">
-                </td>
-                <td>
-                    <img class="hole" src="./img/none.png" alt="hole">
-                </td>
-            </tr>
-        </table>
-    </div>
-
+    <div id="test"></div>
+    <script>
+        const PARENT = document.getElementById('test');
+        const COLOR_LIST = [
+            'EE', 'DD', 'CC', 'BB', 'AA', '99', '88', '77',
+            '66', '55', '44', '33', '22', '11', '00',
+        ];
+        for (let i in COLOR_LIST) {
+            let elem = document.createElement('p');
+            elem.innerText = "　";
+            elem.style.backgroundColor = "#"+COLOR_LIST[i]+"FFFF";
+            PARENT.appendChild(elem);
+        }
+        for (let i in COLOR_LIST) {
+            let elem = document.createElement('p');
+            elem.innerText = "　";
+            elem.style.backgroundColor = "#FF"+COLOR_LIST[i]+"FF";
+            PARENT.appendChild(elem);
+        }
+        for (let i in COLOR_LIST) {
+            let elem = document.createElement('p');
+            elem.innerText = "　";
+            elem.style.backgroundColor = "#FFFF"+COLOR_LIST[i];
+            PARENT.appendChild(elem);
+        }
+    </script>
 </body>
-
-
-<script type="text/javascript">
-    let board = new Board(3, 3);
-    console.log(board);
-
-    //document.getElementById('board').appendChild(board.TABLE);
-</script>
 </html>

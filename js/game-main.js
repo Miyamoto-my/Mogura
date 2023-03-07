@@ -32,7 +32,7 @@ class Statistics {
         // clickDistribution
         for (let i = 0; i < this.cDElems.length; i ++) {
             this.cDElems[i].className = getcDClassName(this.clickDistribution[i]);
-            this.cDElems[i].innerText = (this.clickCount != 0) ?
+            this.cDElems[i].innerText = (this.clickCount[i] != 0) ?
                 String(
                     Math.round(this.clickValidCount[i]/this.clickCount[i]*1000)/10
                     )+"%" : "0%" ;
@@ -60,7 +60,7 @@ class Statistics {
             } else if (value <= 99) {
                 return "cD-9";
             } else {
-                return "cd-10";
+                return "cD-10";
             }
         }
     }
@@ -85,11 +85,13 @@ window.onload = () => {
         gameView.style.display = "none";
     });
     document.getElementById('to_resultView-btn').addEventListener('click', () => {
+        console.log("btn");
         resultView.style.display = "inline";
         gameView.style.display = "none";
 
         console.log(BOARD);
-        new Statistics('clickDistribution', BOARD.clickCount, BOARD.clickValidCount);
+        const STA = new Statistics('clickDistribution', BOARD.clickCount, BOARD.clickValidCount);
+        console.log(STA);
     });
 
     /** setting view 
