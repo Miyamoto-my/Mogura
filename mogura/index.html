@@ -1,46 +1,15 @@
 <!DOCTYPE html>
-<html lang="ja" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>もぐらたたき</title>
-    <script src="./js/mogura.js" charset="utf-8"></script>
-    <style>
-      body {
-        max-width: 800px;
-        background-color: lightblue;
-        text-align: center;
-      }
-      div {
-        margin: 0 auto;
-      }
-      table {
-        display: inline-block;
-        background-color: lime;
-      }
-      button {
-        margin: 5px;
-        padding: 15px 50px;
-        border-radius: 10px;
-        background-color: yellow;
-        font-size: large;
-      }
-      .holeImage1, .holeImage2, .holeImage3, .holeImage4, .holeImage5, .holeImage6, .holeImage7, .holeImage8, .holeImage9 {
-        display : none;   /* 初期状態で非表示 */
-      }
+<html lang="ja">
 
-      /* 以下 */
-      aside {
-        display: inline-block; 
-        width: 280px; 
-        height: 485px;
-        overflow: auto;
-        background-color: lime;
-        color: chocolate;
-        font-family: cursive;
-      }
-    </style>
-  </head>
-  <body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>モグラたたき</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/mogura.js" charset="utf-8"></script>
+</head>
+
+<body>
     <h1>モグラたたきゲーム</h1>
     <div>
         <table>
@@ -61,7 +30,9 @@
             </tr>
         </table>
         <!-- aside付けた -->
-        <aside id="scroll"><ol id="logString"></ol></aside>
+        <aside id="scroll">
+            <ol id="logString"></ol>
+        </aside>
     </div>
     <button onclick="startTimer()" id="start_bt">Start!</button>
 
@@ -72,5 +43,6 @@
     <div>
         ヒット回数：<span id="hitsString"></span>
     </div>
-  </body>
+</body>
+
 </html>
