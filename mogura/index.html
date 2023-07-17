@@ -10,39 +10,44 @@
 </head>
 
 <body>
-    <h1>モグラたたきゲーム</h1>
-    <div>
-        <table>
-            <tr>
-                <td><img id="displayImage1" src="./images/hole.png"></td>
-                <td><img id="displayImage2" src="./images/hole.png"></td>
-                <td><img id="displayImage3" src="./images/hole.png"></td>
-            </tr>
-            <tr>
-                <td><img id="displayImage4" src="./images/hole.png"></td>
-                <td><img id="displayImage5" src="./images/hole.png"></td>
-                <td><img id="displayImage6" src="./images/hole.png"></td>
-            </tr>
-            <tr>
-                <td><img id="displayImage7" src="./images/hole.png"></td>
-                <td><img id="displayImage8" src="./images/hole.png"></td>
-                <td><img id="displayImage9" src="./images/hole.png"></td>
-            </tr>
-        </table>
-        <!-- aside付けた -->
-        <aside id="scroll">
-            <ol id="logString"></ol>
-        </aside>
-    </div>
-    <button onclick="startTimer()" id="start_bt">Start!</button>
-
-    <div>
-        タイマー：<span id="timerString"></span>
-    </div>
-
-    <div>
-        ヒット回数：<span id="hitsString"></span>
-    </div>
+    <header>
+        <h1>モグラたたきゲーム</h1>
+    </header>
+    <main>
+        <div id="game_status_view">
+            <div>
+                タイマー：<span id="timer_view"></span>
+            </div>
+            <div>
+                ヒット回数：<span id="hits_view"></span>
+            </div>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td><img id="displayImage1" src="./images/hole.png"></td>
+                    <td><img id="displayImage2" src="./images/hole.png"></td>
+                    <td><img id="displayImage3" src="./images/hole.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="displayImage4" src="./images/hole.png"></td>
+                    <td><img id="displayImage5" src="./images/hole.png"></td>
+                    <td><img id="displayImage6" src="./images/hole.png"></td>
+                </tr>
+                <tr>
+                    <td><img id="displayImage7" src="./images/hole.png"></td>
+                    <td><img id="displayImage8" src="./images/hole.png"></td>
+                    <td><img id="displayImage9" src="./images/hole.png"></td>
+                </tr>
+            </table>
+            <aside id="scroll">
+                <ol id="logString"></ol>
+            </aside>
+        </div>
+        <div id="game_control">
+            <button onclick="startTimer()" id="start_bt">Start!</button>
+        </div>
+    </main>
 </body>
 
 </html>
